@@ -18,7 +18,7 @@ tmp_dir=$(mktemp -d)
 echo $tmp_dir
 
 # Clone GitHub repo
-git clone git@github.com:Huzafach/argocd.git $tmp_dir
+git clone https://github.com/Huzafach/argocd.git $tmp_dir
 
 # Update image tag
 sed -i '' -e "s/huzafach\/nginx:.*/huzafach\/nginx:$new_ver/g" $tmp_dir/myapp/deployment.yaml
